@@ -14,15 +14,6 @@
   --color-text-default-soft: #3e5164;
   --color-text-inverse: #444;
   --color-text-inverse-soft: #999;
-
-  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  --font-weight-normal: 400;
-  --font-weight-display: 400;
-  --font-weight-btn: 600;
-
-  --rounded-btn: 0.25rem;
 }
 
 .theme-dark {
@@ -34,21 +25,10 @@
 
   --color-text-primary: #fff;
   --color-text-secondary: #bdd9bf;
-  --color-text-default: #f9ffee;
-  --color-text-default-soft: #6a6a6a;
+  --color-text-default: #e9efff;
+  --color-text-default-soft: #ffffff;
   --color-text-inverse: #fff;
   --color-text-inverse-soft: #bbb;
-
-  --font-display: Georgia, Times, "Times New Roman", serif;
-  --font-body: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
-    "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana,
-    "Verdana Ref", sans-serif;
-
-  --font-weight-normal: 400;
-  --font-weight-display: 400;
-  --font-weight-btn: 600;
-
-  --rounded-btn: 0;
 }
 @import "tailwindcss/components";
 /* purgecss end ignore */
@@ -58,4 +38,8 @@
   supported-color-schemes: dark light;
   --duration: 0.5s;
   --timing: ease;
+}
+html,
+body {
+  height: 100%;
 }
