@@ -2,7 +2,7 @@
   <nav
     class="flex items-center justify-between flex-wrap bg-red-600 light-mode:bg-black p-6"
   >
-    <h1 class="font-black text-3xl">
+    <h1 class="text-3xl font-black text-default hover:text-default-soft">
       mifro
     </h1>
 
@@ -24,24 +24,24 @@
     <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
       <div class="text-sm md:flex-grow md:flex flex-column justify-end">
         <router-link
-          to="/iframes"
-          class="block mt-4 md:inline-block md:mt-0 text-black hover:text-purple-700 font-bold mr-4"
+          :to="{ name: 'versions', params: { version: 'iframes' } }"
+          class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold text-default hover:text-default-soft"
           >Iframes</router-link
         >
         <router-link
-          to="/javascript"
-          class="block mt-4 md:inline-block md:mt-0 text-black hover:text-purple-700 font-bold mr-4"
+          :to="{ name: 'versions', params: { version: 'javascript' } }"
+          class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold text-default hover:text-default-soft"
           >JavaScript</router-link
         >
         <router-link
-          to="/web-components"
-          class="block mt-4 md:inline-block md:mt-0 text-black hover:text-purple-700 font-bold"
+          :to="{ name: 'versions', params: { version: 'web-components' } }"
+          class="block mt-4 md:mt-0 md:inline-block  font-bold text-default hover:text-default-soft"
           >WebComponents</router-link
         >
       </div>
       <div>
         <button
-          class="theme-btn font-body text-sm px-4 py-2 leading-none border rounded-btn bg-primary hover:bg-soft text-primary hover:text-secondary"
+          class="text-sm px-4 py-2 mx-5 leading-none border rounded-btn bg-primary hover:bg-soft text-primary hover:text-secondary"
         >
           Login
         </button>

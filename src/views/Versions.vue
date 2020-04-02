@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>{{ this.$route.params.version }}</section>
 </template>
 
 <script>
