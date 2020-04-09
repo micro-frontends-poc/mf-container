@@ -2,9 +2,11 @@
   <nav
     class="flex items-center justify-between flex-wrap bg-red-600 light-mode:bg-black p-6"
   >
-    <h1 class="text-3xl font-black text-default hover:text-default-soft">
-      mifro
-    </h1>
+    <router-link to="/">
+      <h1 class="text-3xl font-black hover:text-default-soft">
+        mifro
+      </h1>
+    </router-link>
 
     <div class="block md:hidden">
       <button
@@ -25,17 +27,17 @@
       <div class="text-sm md:flex-grow md:flex flex-column justify-end">
         <router-link
           :to="{ name: 'versions', params: { version: 'iframes' } }"
-          class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold text-default hover:text-default-soft"
+          class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold hover:text-default-soft"
           >Iframes</router-link
         >
         <router-link
           :to="{ name: 'versions', params: { version: 'javascript' } }"
-          class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold text-default hover:text-default-soft"
+          class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold hover:text-default-soft"
           >JavaScript</router-link
         >
         <router-link
           :to="{ name: 'versions', params: { version: 'web-components' } }"
-          class="block mt-4 md:mt-0 md:inline-block  font-bold text-default hover:text-default-soft"
+          class="block mt-4 md:mt-0 md:inline-block  font-bold hover:text-default-soft"
           >WebComponents</router-link
         >
       </div>

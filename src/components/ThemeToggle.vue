@@ -1,21 +1,17 @@
 <template>
-  <button @click="toggleTheme">{{ dark ? "&#127772;" : "&#127774;" }}</button>
+  <button @click="toggleTheme" class=" focus:outline-none">
+    {{ dark ? "&#127772;" : "&#127774;" }}
+  </button>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      dark:
-        window.matchMedia("(prefers-color-scheme: dark)").media.toString() ==
-        "(prefers-color-scheme: dark)"
+      dark: localStorage.getItem("theme"),
     }
   },
-  mounted() {
-    if (window.matchMedia("(prefers-color-scheme)").media !== "not all") {
-      console.log("🎉 Dark mode is supported")
-    }
-  },
+
   methods: {
     toggleTheme() {
       this.dark = !this.dark
@@ -26,8 +22,8 @@ export default {
         document.documentElement.classList.remove("theme-dark")
         localStorage.removeItem("theme")
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

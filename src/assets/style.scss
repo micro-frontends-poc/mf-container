@@ -7,6 +7,7 @@
   --color-bg-secondary: #ffc857;
   --color-bg-default: #fff;
   --color-bg-inverse: #fff;
+  --color-bg-inverse-soft: #e4e4e4;
 
   --color-text-primary: #fff;
   --color-text-secondary: #bdd9bf;
@@ -14,6 +15,7 @@
   --color-text-default-soft: #3e5164;
   --color-text-inverse: #444;
   --color-text-inverse-soft: #999;
+  color: var(--color-text-default);
 }
 
 .theme-dark {
@@ -22,6 +24,7 @@
   --color-bg-secondary: #ffc857;
   --color-bg-default: #f4f4f4;
   --color-bg-inverse: #373737;
+  --color-bg-inverse-soft: #494949;
 
   --color-text-primary: #fff;
   --color-text-secondary: #bdd9bf;
@@ -30,6 +33,38 @@
   --color-text-inverse: #fff;
   --color-text-inverse-soft: #bbb;
 }
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl font-bold;
+}
+
+h3 {
+  @apply text-lg font-bold;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+table {
+  @apply border w-full;
+}
+
+th {
+  @apply px-4;
+}
+
+td {
+}
+
 @import "tailwindcss/components";
 /* purgecss end ignore */
 @import "tailwindcss/utilities";
