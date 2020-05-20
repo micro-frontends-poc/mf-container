@@ -1,16 +1,29 @@
 <template>
   <section
-    class="versions-container md:col-start-2 xl:col-start-3 col-span-10 md:col-span-8 xl:col-span-6 grid grid-cols-9 gap-4"
+    class="versions-container md:col-start-2 col-span-12 md:col-span-10 grid grid-cols-9 gap-4"
   >
     <section class="col-span-9 ">
-      <h2>{{ this.$route.params.version }}</h2>
+      <h1>{{ this.$route.params.version }}</h1>
     </section>
     <section class="col-span-9 md:col-span-6 bg-inverse-soft">
-      <p>Version as custom component here</p>
+      <iframe
+        src="http://localhost:3000"
+        frameBorder="0"
+        scrolling="no"
+        title="MF Web Components demo"
+        width="100%"
+        height="100%"
+        style="min-height: 48rem"
+        id="wc-iframe"
+      ></iframe>
     </section>
     <section class="col-span-9 md:col-span-3 bg-inverse-soft">
-      <h3>Advantages</h3>
-      <h3>Disadvantages</h3>
+      <h2>About this pattern</h2>
+      <p></p>
+    </section>
+    <section class="col-span-9 bg-inverse-soft">
+      <h2>Advantages</h2>
+      <h2>Disadvantages</h2>
     </section>
   </section>
 </template>

@@ -3,9 +3,9 @@
     class="flex items-center justify-between flex-wrap bg-red-600 light-mode:bg-black p-6"
   >
     <router-link to="/">
-      <h1 class="text-3xl font-black hover:text-default-soft">
+      <span class="title text-3xl font-black hover:text-default-soft">
         mifro
-      </h1>
+      </span>
     </router-link>
 
     <div class="block md:hidden">
@@ -26,19 +26,24 @@
     <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
       <div class="text-sm md:flex-grow md:flex flex-column justify-end">
         <router-link
-          :to="{ name: 'versions', params: { version: 'iframes' } }"
+          :to="{ name: 'versions', params: { version: 'Iframes' } }"
           class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold hover:text-default-soft"
           >Iframes</router-link
         >
         <router-link
-          :to="{ name: 'versions', params: { version: 'javascript' } }"
+          :to="{ name: 'versions', params: { version: 'Javascript' } }"
           class="block mt-4 md:mt-0 mr-4 md:inline-block font-bold hover:text-default-soft"
           >JavaScript</router-link
         >
         <router-link
-          :to="{ name: 'versions', params: { version: 'web-components' } }"
-          class="block mt-4 md:mt-0 md:inline-block  font-bold hover:text-default-soft"
+          :to="{ name: 'versions', params: { version: 'Web Components' } }"
+          class="block mt-4 md:mt-0 mr-4 md:inline-block  font-bold hover:text-default-soft"
           >WebComponents</router-link
+        >
+        <router-link
+          :to="{ name: 'about' }"
+          class="block mt-4 md:mt-0 md:inline-block  font-bold hover:text-default-soft"
+          >Other Methods</router-link
         >
       </div>
       <div>
@@ -57,19 +62,19 @@
 import ThemeToggle from "@/components/ThemeToggle.vue"
 export default {
   components: {
-    ThemeToggle
+    ThemeToggle,
   },
   data() {
     return {
-      isMenuOpen: false
+      isMenuOpen: false,
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Molle:400i&display=swap");
-h1 {
+.title {
   font-family: "Molle", cursive;
 }
 #nav {

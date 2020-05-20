@@ -22,6 +22,11 @@ export default {
         document.documentElement.classList.remove("theme-dark")
         localStorage.removeItem("theme")
       }
+      const wcIframe = document.getElementById("wc-iframe")
+      wcIframe.contentWindow.postMessage(
+        this.dark ? "dark" : "light",
+        "http://localhost:3000"
+      )
     },
   },
 }

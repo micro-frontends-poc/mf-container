@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="bg-inverse flex flex-col h-full">
+  <div id="app" class="bg-inverse flex flex-col min-h-full">
     <Navigation msg="Welcome to Your Vue.js App" />
-    <main class="grid grid-cols-10 flex-1 ">
+    <main class="grid grid-cols-12 flex-1 ">
       <router-view />
     </main>
 
@@ -14,9 +14,9 @@
 import Navigation from "@/components/Navigation.vue"
 export default {
   components: {
-    Navigation
+    Navigation,
   },
-  methods: {}
+  methods: {},
 }
 </script>
 <style lang="scss"></style>
