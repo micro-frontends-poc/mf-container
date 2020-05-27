@@ -1,7 +1,11 @@
 <template>
-  <div id="app" class="bg-inverse flex flex-col min-h-full">
-    <Navigation msg="Welcome to Your Vue.js App" />
-    <main class="grid grid-cols-12 flex-1 ">
+  <div
+    id="app"
+    class="bg-default flex flex-col min-h-full"
+    :class="{ 'theme-dark': theme == 'dark' }"
+  >
+    <Navigation />
+    <main class="grid grid-cols-12 flex-1 mt-16">
       <router-view />
     </main>
 
@@ -12,11 +16,14 @@
 </template>
 <script>
 import Navigation from "@/components/Navigation.vue"
+
+import { mapState } from "vuex"
 export default {
   components: {
-    Navigation,
+    Navigation
   },
-  methods: {},
+
+  computed: mapState(["theme"])
 }
 </script>
 <style lang="scss"></style>

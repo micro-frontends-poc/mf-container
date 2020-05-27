@@ -1,11 +1,12 @@
 /* purgecss start ignore */
 @import "tailwindcss/base";
 
-:root {
+#app {
   --color-bg-primary: #a100ff;
   --color-bg-primary-soft: #9c5ac2;
   --color-bg-secondary: #ffc857;
   --color-bg-default: #fff;
+  --color-bg-default-soft: rgb(241, 242, 253);
   --color-bg-inverse: #fff;
   --color-bg-inverse-soft: #e4e4e4;
 
@@ -16,22 +17,23 @@
   --color-text-inverse: #444;
   --color-text-inverse-soft: #999;
   color: var(--color-text-default);
-}
 
-.theme-dark {
-  --color-bg-primary: #a100ff;
-  --color-bg-primary-soft: #c263fa;
-  --color-bg-secondary: #ffc857;
-  --color-bg-default: #f4f4f4;
-  --color-bg-inverse: #373737;
-  --color-bg-inverse-soft: #494949;
+  &.theme-dark {
+    --color-bg-primary: #a100ff;
+    --color-bg-primary-soft: #c263fa;
+    --color-bg-secondary: #ffc857;
+    --color-bg-default: #272336;
+    --color-bg-default-soft: #342e47;
+    --color-bg-inverse: #d3d3d3;
+    --color-bg-inverse-soft: #494949;
 
-  --color-text-primary: #fff;
-  --color-text-secondary: #bdd9bf;
-  --color-text-default: #e9efff;
-  --color-text-default-soft: #ffffff;
-  --color-text-inverse: #fff;
-  --color-text-inverse-soft: #bbb;
+    --color-text-primary: #fff;
+    --color-text-secondary: #bdd9bf;
+    --color-text-default: #e9efff;
+    --color-text-default-soft: #ffffff;
+    --color-text-inverse: #fff;
+    --color-text-inverse-soft: #bbb;
+  }
 }
 
 h1 {

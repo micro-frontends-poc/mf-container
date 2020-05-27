@@ -1,7 +1,9 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
-import Home from "../views/Home.vue"
-import Versions from "../views/Versions.vue"
+import Home from "@/views/Home.vue"
+import Iframes from "@/views/Iframes.vue"
+import JavaScript from "@/views/JavaScript.vue"
+import WebComponents from "@/views/WebComponents.vue"
 
 Vue.use(VueRouter)
 
@@ -12,9 +14,19 @@ const routes = [
     component: Home
   },
   {
-    path: "/versions/:version",
-    name: "versions",
-    component: Versions
+    path: "/iframes",
+    name: "iframes",
+    component: Iframes
+  },
+  {
+    path: "/javascript",
+    name: "javascript",
+    component: JavaScript
+  },
+  {
+    path: "/web-components",
+    name: "web-components",
+    component: WebComponents
   },
   {
     path: "/about",
