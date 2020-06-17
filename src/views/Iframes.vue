@@ -14,7 +14,13 @@
       ></iframe>
     </template>
     <template v-slot:about>
-      <p>about</p>
+      <p>
+        Iframes provide high level of isolation. They all have their own window
+        object and a completely separate DOM. The only way data can be passed
+        between them on client side is to use the Window object's postMessage
+        method.
+      </p>
+      <code>window.addEventListener("message", function(event) { })</code>
     </template>
     <template v-slot:advantages> </template>
     <template v-slot:disadvantages> </template>

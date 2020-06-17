@@ -67,6 +67,10 @@ th {
 td {
 }
 
+code {
+  @apply bg-inverse;
+}
+
 @import "tailwindcss/components";
 /* purgecss end ignore */
 @import "tailwindcss/utilities";

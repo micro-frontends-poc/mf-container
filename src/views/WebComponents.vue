@@ -2,7 +2,7 @@
   <VersionLayout>
     <template v-slot:webshop>
       <iframe
-        src="http://localhost:3000"
+        :src="url"
         frameBorder="0"
         scrolling="no"
         title="MF Web Components demo"
