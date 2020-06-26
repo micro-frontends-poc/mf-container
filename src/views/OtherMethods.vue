@@ -1,5 +1,5 @@
 <template>
-  <div class="about col-start-2 col-span-10">
+  <div class="about col-start-2 xl:col-start-4 col-span-10 xl:col-span-6">
     <h1>Other methods</h1>
     <p>
       The three demonstrated methods in this website integrated the parts run-time and on client-side. There are other ways to achieve the goal, the unified user interface:  </p>

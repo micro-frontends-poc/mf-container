@@ -30,26 +30,36 @@
         </li>
       </ul>
       <p>
-            Micro-frontend architecture aims to solve these problems by separating
+        Micro-frontend architecture aims to solve these problems by separating
         the project (the Frontend Monolith) to multiple ones (to
         micro-frontends), while keeping the unified user interface. This can
-        happen per feature ('horizontal split') or per page ('vertical split', see Luca Mezzalira's article below).
+        happen per feature ('horizontal split') or per page ('vertical split',
+        see Luca Mezzalira's article below).
       </p>
-      <p>More and more companies apply micro-frontends, e.g. IKEA, Microsoft, Spotify, Zalando.</p>
-       <p>
+      <p>
+        More and more companies apply micro-frontends, e.g. IKEA, Microsoft,
+        Spotify, Zalando.
+      </p>
+      <p>
         There are more ways how the concept can be applied to a project. This
         website aims to introduce the common and community-embraced patterns,
         with eveluation of them to make the decision easier for your team.
       </p>
-      <img class="mt-6 mx-auto" src="@/assets/mf-scheme.drawio.svg" alt="Micro-frontend scheme">
-      <figcaption class="table mx-auto mb-6">Horizontally split frontend</figcaption>  
+      <img
+        class="mt-6 mx-auto"
+        src="@/assets/mf-scheme.drawio.svg"
+        alt="Micro-frontend scheme"
+      />
+      <figcaption class="table mx-auto mb-6">
+        Horizontally split frontend
+      </figcaption>
       <h2 class="mt-10">Advantages:</h2>
       <ul class="my-6">
         <li>
           <b>Agile teams:</b> Ideally, teams have a one-to-one relationship with
           micro-frontend projects. If the microservices are organized based on
           the same separation, an agile team can be fully responsible to a
-          certain feature, from database to frontend. 
+          certain feature, from database to frontend.
         </li>
         <li>
           <b>Smaller projects:</b> Individual projects can be a lot smaller in
@@ -65,21 +75,56 @@
           be laid down, it is possible to upgrade a project to a different JS
           framework or change a library without affecting the other parts.
         </li>
-        <li><b>Independent deployment:</b> Teams can deploy wehenever they want, their bugs can remain local and don't render the application unreachable (probably a versioning system is needed)</li>
-        <li><b>Reusability:</b> Components created by a team can be reused in the web app, mobile app, TV app, ...</li>
-      </ul>
-
-     
-      <h2 class="mt-10">Caveats/Challenges:</h2>
-      <ul class="my-6">
-          <li>
-          <b>Complexity:</b> There are many aspects to consider before switching to micro-frontends. 
-          It has to be a conscious decision, as it fundamentally defines teh frotnend architecture and adds quite an operational overhead. 
+        <li>
+          <b>Independent deployment:</b> Teams can deploy wehenever they want,
+          their bugs can remain local and don't render the application
+          unreachable (probably a versioning system is needed)
         </li>
         <li>
-          <b>Increased bundle sizes:</b> 
+          <b>Reusability:</b> Components created by a team can be reused in the
+          web app, mobile app, TV app, ...
         </li>
-        </ul>
+      </ul>
+
+      <h2 class="mt-10">Caveats/Challenges:</h2>
+      There are many aspects to consider before switching to micro-frontends. It
+      has to be a conscious decision, as it fundamentally defines the frontend
+      architecture. What is important to note is that micro-frontends is 
+      about <span class="font-bold italic">developer experience and team management</span> rather than user experience.
+      <ul class="my-6">
+        <li>
+          <b>Complexity:</b>
+          No matter what integration method we choose, it adds quite an
+          operational overhead. The architecture can be hard to understand and
+          the integration and optimization can make it increasingly complex.
+        </li>
+        <li>
+          <b>Increased download size:</b> More apps mean more code to download
+          for the client browser. There can be consensus between the teams on
+          what libraries to use and then share it, but it works against the goal
+          of this architecture. Project members have to find the tradeoff
+          between size and independence.
+        </li>
+        <li>
+          <b>CSS and JS conflicts:</b> There can be naming conflicts of JS
+          variables and CSS props, that can cause obscure bugs. This is the
+          easiest problem to solve: some methods naturally offer isolation (see
+          iframes), while in some cases, the teams can agree on namespaces and
+          prefix their variables.
+        </li>
+        <li>
+          <b>SEO:</b> Since the parts live in isolation (especially iframes),
+          web crawlers can only see the container's content. If it is important
+          in your project, a server-side template composition method is the
+          best.
+        </li>
+        <li>
+          <b>Cross-app communication:</b> Ideally the separation of the
+          micro-frontends happen in a way that the parts don't or only minimally
+          communicate. But if it is necessary, it can happen through the Window
+          object or through some publish/subscribe pattern implementation.
+        </li>
+      </ul>
     </article>
     <section class="mt-6">
       <h2>Useful links:</h2>
@@ -96,12 +141,14 @@
             >Michael Geers: Micro Frontends</a
           >: Focuses more on the team management aspect
         </li>
-          <li>
-          <a class="link-highlight" href="https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513"
+        <li>
+          <a
+            class="link-highlight"
+            href="https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513"
             >Luca Mezzalira: Micro-frontends decisions framework</a
-          >: A detailed article about the decisions a team has to make before switching to micro-frontends
+          >: A detailed article about the decisions a team has to make before
+          switching to micro-frontends
         </li>
-        
       </ul>
     </section>
   </section>
@@ -112,4 +159,3 @@ export default {
   name: "Home"
 }
 </script>
-

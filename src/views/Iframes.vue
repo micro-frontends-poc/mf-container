@@ -1,6 +1,12 @@
 <template>
   <VersionLayout>
-    <template v-slot:title>Iframe</template>
+    <template v-slot:title>Iframes</template>
+     <template v-slot:source>
+      <a class="link-highlight"
+            href="https://iframe-container.now.sh/">This webshop</a> / 
+      <a class="link-highlight"
+            href="https://github.com/micro-frontends-poc/mf-iframe">Source</a>
+    </template>
     <template v-slot:webshop>
       <iframe
         :src="url"
@@ -13,12 +19,11 @@
         ref="iframe"
       ></iframe>
     </template>
+   
     <template v-slot:about>
-      If we compose the UI from iframes, the projects can be developed independently. 
+      If we compose the UI with iframes, the projects can be developed independently. 
       The webshop modules seen on the left are available in their domains: 
       <ul>
-        <li><a class="link-highlight"
-            href="https://iframe-container.now.sh/">Frame/Navigation: React</a></li>
         <li><a class="link-highlight"
             href="https://iframe-product.now.sh/">Product list: Vue</a></li>
         <li><a class="link-highlight"
@@ -26,19 +31,46 @@
       </ul>
       <p>
         Assembling the parts with iframes is the oldest method of creating a UI
-        out of several projects. Iframes provide high level of isolation. They
-        all have their own window object and a completely separate DOM. The only
-        way data can be passed between them on client side is to use the Window
-        object's postMessage method.
+        out of several projects on the client side. Iframes provide high level of isolation. 
+        They have a completely separate DOM. The only
+        way data can be passed between the container and the iframe is to use the Window
+        object's postMessage method and listen to it on the other side.
       </p>
-      <code>window.addEventListener("message", function(event) { })</code>
+     
     </template>
     <template v-slot:advantages>
       <ul>
-        <li>There is full independence</li>
+        <li>Minimal dependency on other micro-frontends</li>
+        <li>Easy integration</li>
+        <li>No clashing </li>
       </ul>
     </template>
-    <template v-slot:disadvantages> </template>
+    <template v-slot:disadvantages> 
+      <ul>
+        <li>Full SEO coverage of the site is basically impossible</li>
+        <li>Limited styling capabilities</li>
+        <li>One project can expose one micro-frontend</li>
+      </ul>
+    </template>
+    <template v-slot:links>
+       <ul>
+        <li>
+          <a
+            class="link-highlight"
+            href="https://javascript.info/cross-window-communication"
+            >JavaScript.info:</a
+          > Everything that needs to be known about iframe-parent communication
+        </li>
+          <li>
+          <a
+            class="link-highlight"
+            href="https://www.toptal.com/front-end/micro-frontends-strengths-benefits"
+            >The Strengths and Benefits of Micro Frontends:</a
+          > A hybrid approach with iframes and Web Components
+        </li>
+      </ul>
+      
+    </template>
   </VersionLayout>
 </template>
 

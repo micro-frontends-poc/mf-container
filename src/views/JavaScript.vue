@@ -1,5 +1,12 @@
 <template>
   <VersionLayout>
+        <template v-slot:title>JavaScript</template>
+     <template v-slot:source>
+      <a class="link-highlight"
+            href="https://mf-js-container.now.sh/">This webshop</a> / 
+      <a class="link-highlight"
+            href="https://github.com/micro-frontends-poc/mf-js">Source</a>
+    </template>
     <template v-slot:webshop>
       <iframe
         src="http://localhost:3000"
@@ -19,7 +26,7 @@
       Without the container application context, it is not even possible to render an app for development.</p>
 
       
-      <h3>Alternatives to Single-SPA</h3>
+      <h3 class="mt-10">Alternatives to Single-SPA</h3>
       <ul>
         <li>
           <a
@@ -46,6 +53,32 @@
     </template>
     <template v-slot:advantages> </template>
     <template v-slot:disadvantages> </template>
+     <template v-slot:links>
+       <ul>
+        <li>
+          <a
+            class="link-highlight"
+            href="https://martinfowler.com/articles/micro-frontends.html#TheContainer"
+            >Cam Jackson: Micro Frontends:</a
+          > The example built in the end of the article uses React Router to integrate the React micro-frontends.
+        </li>
+          <li>
+          <a
+            class="link-highlight"
+            href="https://single-spa.js.org/docs/recommended-setup/"
+            >Single-SPA</a
+          > provides a whole ecosystem and recommends solutions to some common challenges of the architecture.
+        </li>
+          <li>
+          <a
+            class="link-highlight"
+            href="https://itnext.io/prototyping-micro-frontends-d03397c5f770"
+            >Kjartan Re</a
+          >
+        </li>
+      </ul>
+      
+    </template>
   </VersionLayout>
 </template>
 
