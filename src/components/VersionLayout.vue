@@ -15,6 +15,8 @@
       <slot name="advantages"></slot>
       <h2>Disadvantages</h2>
       <slot name="disadvantages"></slot>
+      <h2>Useful links</h2>
+      <slot name="links"></slot>
     </section>
   </section>
 </template>

@@ -14,7 +14,7 @@
   --color-text-secondary: #bdd9bf;
   --color-text-default: #2e4052;
   --color-text-default-soft: #3e5164;
-  --color-text-inverse: #444;
+  --color-text-inverse: #34257a;
   --color-text-inverse-soft: #999;
   color: var(--color-text-default);
 
@@ -31,7 +31,7 @@
     --color-text-secondary: #bdd9bf;
     --color-text-default: #e9efff;
     --color-text-default-soft: #ffffff;
-    --color-text-inverse: #fff;
+    --color-text-inverse: #6063ff;
     --color-text-inverse-soft: #bbb;
   }
 }
@@ -49,7 +49,7 @@ h3 {
 }
 
 ul {
-  @apply list-disc;
+  @apply list-disc my-6 ml-4;
 }
 
 ol {
@@ -68,7 +68,14 @@ td {
 }
 
 code {
-  @apply bg-inverse;
+  @apply bg-default-soft;
+}
+
+.link-highlight {
+  @apply text-inverse font-bold;
+  &:hover {
+    @apply bg-secondary;
+  }
 }
 
 @import "tailwindcss/components";

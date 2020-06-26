@@ -5,28 +5,104 @@
       src="@/assets/art-1-freepik.jpg"
       alt="Micro-frontends art"
     />
+    <p class="text-xs ml-auto text-right text-secondary -mt-5">
+      Designed by <a href="https://www.freepik.com/">Freepik</a>
+    </p>
+
     <article class="mt-16">
       <h1>Micro-frontends</h1>
       <i>Microservices concept for the frontend</i>
       <p class="my-6">
-        When several developers work on a frontend project, things can get
-        messy:
+        When several developers work on a frontend project, problems can arise:
       </p>
-      <ul>
-        <li></li>
+      <ul class="mb-6">
+        <li>
+          The project grows so big that there is no one who understands every
+          part
+        </li>
+        <li>
+          Developers can feel they can't use the technology stack they would be
+          most effective with, possibly stuck with something outdated
+        </li>
+        <li>
+          The deployment happens at a point which is too early for one team and
+          too late for the other one
+        </li>
       </ul>
-
       <p>
-        There are several ways how the concept can be applied to a project. This
+            Micro-frontend architecture aims to solve these problems by separating
+        the project (the Frontend Monolith) to multiple ones (to
+        micro-frontends), while keeping the unified user interface. This can
+        happen per feature ('horizontal split') or per page ('vertical split', see Luca Mezzalira's article below).
+      </p>
+      <p>More and more companies apply micro-frontends, e.g. IKEA, Microsoft, Spotify, Zalando.</p>
+       <p>
+        There are more ways how the concept can be applied to a project. This
         website aims to introduce the common and community-embraced patterns,
         with eveluation of them to make the decision easier for your team.
       </p>
+      <img class="mt-6 mx-auto" src="@/assets/mf-scheme.drawio.svg" alt="Micro-frontend scheme">
+      <figcaption class="table mx-auto mb-6">Horizontally split frontend</figcaption>  
+      <h2 class="mt-10">Advantages:</h2>
+      <ul class="my-6">
+        <li>
+          <b>Agile teams:</b> Ideally, teams have a one-to-one relationship with
+          micro-frontend projects. If the microservices are organized based on
+          the same separation, an agile team can be fully responsible to a
+          certain feature, from database to frontend. 
+        </li>
+        <li>
+          <b>Smaller projects:</b> Individual projects can be a lot smaller in
+          size and complexity.
+        </li>
+        <li>
+          <b>Gradual upgrades:</b> A smaller project also means less
+          dependencies, it is easier to upgrade them to newer versions.
+          Architectural changes can also be introduced project by project.
+        </li>
+        <li>
+          <b>Faster moving teams:</b> Aside from the common rules that needed to
+          be laid down, it is possible to upgrade a project to a different JS
+          framework or change a library without affecting the other parts.
+        </li>
+        <li><b>Independent deployment:</b> Teams can deploy wehenever they want, their bugs can remain local and don't render the application unreachable (probably a versioning system is needed)</li>
+        <li><b>Reusability:</b> Components created by a team can be reused in the web app, mobile app, TV app, ...</li>
+      </ul>
+
+     
+      <h2 class="mt-10">Caveats/Challenges:</h2>
+      <ul class="my-6">
+          <li>
+          <b>Complexity:</b> There are many aspects to consider before switching to micro-frontends. 
+          It has to be a conscious decision, as it fundamentally defines teh frotnend architecture and adds quite an operational overhead. 
+        </li>
+        <li>
+          <b>Increased bundle sizes:</b> 
+        </li>
+        </ul>
     </article>
-    <section>
-      <a href="https://martinfowler.com/articles/micro-frontends.html"
-        >Cam Jackson: Micro Frontends</a
-      >
-      A very comprehensive article, if you read only one, choose this!
+    <section class="mt-6">
+      <h2>Useful links:</h2>
+      <ul>
+        <li>
+          <a
+            class="link-highlight"
+            href="https://martinfowler.com/articles/micro-frontends.html"
+            >Cam Jackson: Micro Frontends</a
+          >: A very comprehensive article, if you read only one, choose this!
+        </li>
+        <li>
+          <a class="link-highlight" href="https://micro-frontends.org/"
+            >Michael Geers: Micro Frontends</a
+          >: Focuses more on the team management aspect
+        </li>
+          <li>
+          <a class="link-highlight" href="https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513"
+            >Luca Mezzalira: Micro-frontends decisions framework</a
+          >: A detailed article about the decisions a team has to make before switching to micro-frontends
+        </li>
+        
+      </ul>
     </section>
   </section>
 </template>
@@ -36,3 +112,4 @@ export default {
   name: "Home"
 }
 </script>
+

@@ -4,7 +4,7 @@
       <div class="modal-wrapper">
         <div class="modal-container p-4 bg-default">
           <h2>Username</h2>
-
+          <p class="italic text-sm">This will only be used to show in the demo webshop headers.</p>
           <input type="text" v-model="username" class="w-full my-4 border" />
           <button
             class="w-full py-2 text-sm leading-none border rounded-btn bg-primary hover:bg-soft text-primary hover:text-secondary"

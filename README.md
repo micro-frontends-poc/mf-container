@@ -2,6 +2,11 @@
 
 > Main container application for micro-frontends architecture POC.
 
+Demo: https://mf-container.now.sh/
+
+The app includes three webshops with iframes, each demonstrating different ways how micro-frontends can be assembled.
+The username and the color theme data changes are passed down to the webshops. 
+
 ## Project setup
 
 ```
@@ -19,25 +24,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your unit tests
-
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).

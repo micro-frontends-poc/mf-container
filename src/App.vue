@@ -5,12 +5,15 @@
     :class="{ 'theme-dark': theme == 'dark' }"
   >
     <Navigation />
-    <main class="grid grid-cols-12 flex-1 mt-16">
+    <main class="grid grid-cols-12 flex-1 my-16">
       <router-view />
     </main>
 
     <footer>
-      <p class=" text-sm italic text-center">Made by Emese @Accenture, 2020.</p>
+      <p class=" text-sm italic text-center">
+        Made by <a href="https://github.com/memmm">Emese</a> @Accenture, 2020.
+      </p>
+     
     </footer>
   </div>
 </template>
@@ -26,4 +29,6 @@ export default {
   computed: mapState(["theme"])
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+
+</style>
