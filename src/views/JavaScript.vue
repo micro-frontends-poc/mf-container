@@ -9,7 +9,7 @@
     </template>
     <template v-slot:webshop>
       <iframe
-        src="http://localhost:3000"
+        :src="url"
         frameBorder="0"
         scrolling="no"
         title="MF Web Components demo"
@@ -49,10 +49,42 @@
             >Piral</a
           >
         </li>
+           <li>
+          <a
+            class="link-highlight"
+            href="https://github.com/namecheap/ilc"
+            >Isomorphic Layout Composer</a
+          > complete solution for Micro Frontends composition into SPA with SSR support.
+          </li>
       </ul>
     </template>
-    <template v-slot:advantages> </template>
-    <template v-slot:disadvantages> </template>
+    <template v-slot:advantages>
+      <h4 class="font-bold">...of assembling with JavaScript:</h4>
+      <ul class="my-3">
+        <li>Flexible</li>
+        <li>There are existing tools, meta-frameworks</li>
+      </ul>
+         <h4 class="font-bold">...of Single-SPA:</h4>
+       <ul class="my-3">
+        <li>Relatively good adaptation by the community</li>
+        <li>Good documentation</li>
+        <li>Provides a CLI tool</li>
+      </ul>
+    </template>
+    <template v-slot:disadvantages> 
+       <h4 class="font-bold">...of assembling with JavaScript:</h4>
+      <ul class="my-3">
+        <li>It is hard to implement as there are several aspects have to be considered 
+          (mounting/unmounting the apps, lazy loading, SEO, isolation, etc.)</li>
+        <li>It is harder to maintain a custom solution</li>
+      </ul>
+         <h4 class="font-bold">...of Single-SPA:</h4>
+       <ul class="my-3">
+        <li>Requires a structural change of every frontend parts</li>
+        <li>It is not possible to run a micro-frontend in development mode, only in the container</li>
+        <li>The container app must be a vanilla JS project without content</li>
+      </ul>
+    </template>
      <template v-slot:links>
        <ul>
         <li>
@@ -68,14 +100,8 @@
             href="https://single-spa.js.org/docs/recommended-setup/"
             >Single-SPA</a
           > provides a whole ecosystem and recommends solutions to some common challenges of the architecture.
-        </li>
-          <li>
-          <a
-            class="link-highlight"
-            href="https://itnext.io/prototyping-micro-frontends-d03397c5f770"
-            >Kjartan Re</a
-          >
-        </li>
+          </li>
+        
       </ul>
       
     </template>

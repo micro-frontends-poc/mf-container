@@ -7,17 +7,17 @@
     (<slot name="source"></slot>)
   </div>
     
-    <section class="col-span-9 md:col-span-5 border border-gray-400">
+    <section class="col-span-9 md:col-span-5">
       <slot name="webshop">Loading...</slot>
     </section>
     <section class="col-span-9 md:col-span-4 ">
       
-      <h2 class="mt-6">About this pattern</h2>
+      <h2 class="">About this pattern</h2>
       <slot name="about"></slot>
       <h2 class="mt-6">Useful links</h2>
       <slot name="links"></slot>
     </section>
-    <section class="mt-10 col-span-9 flex justify-between">
+    <section class="mt-10 col-span-9 flex justify-between flex-col md:flex-row">
       <section class="flex-1 mr-6">
         <h2>Advantages</h2>
         <slot name="advantages"></slot>

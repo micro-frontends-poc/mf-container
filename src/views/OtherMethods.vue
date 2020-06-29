@@ -2,9 +2,12 @@
   <div class="about col-start-2 xl:col-start-4 col-span-10 xl:col-span-6">
     <h1>Other methods</h1>
     <p>
-      The three demonstrated methods in this website integrated the parts run-time and on client-side. There are other ways to achieve the goal, the unified user interface:  </p>
+      The three demonstrated methods in this website integrate the parts run-time and on client-side. 
+      There are other ways to achieve the goal (the unified user interface), some of these are complementary:  </p>
       <h2>Server-side composition</h2>
-      <p>It is possible to construct the pages with Server Side Includes.</p>
+      <p>The old school method is to compose the layout on the server. 
+        This method gained traction again with the new advent of SSR. 
+        One way to construct the pages on the server is with Server Side Includes.</p>
        <ul>
         <li>
           <a
@@ -37,6 +40,7 @@
         A markup language, Edge Side Includes can help compose the fragments.</p>
       <h2>Build-time integration</h2>
       <h3>Module Federation</h3> 
+      <p>It is an exciting new feature of Webpack 5.</p>
       <h3>npm packages</h3> 
   
   </div>

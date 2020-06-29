@@ -27,9 +27,15 @@
 <li>Shadow DOM can be attached to it have its own scope. </li>
 <li>HTML templates with the <code>&lt;template&gt;</code> and <code>&lt;slot&gt;</code> makes reusability much easier.</li>
         </ul>
-        
+        <img
+        class="my-6"
+        src="@/assets/wc-example.svg"
+        alt="Micro-frontends example with Web Components"
+      />
        <p>Web Components can fire Custom Events and data can be passed to them thorough attibutes. 
-         These features make them a viable option to wrap our micro-frontends into Web Components.</p>
+         These features make them a viable option to wrap our micro-frontends into Web Components. On the above example, 
+         the 'product' Web Component fired an event (item was added to cart). The container app listens to this event and 
+         updates the 'cart-items' attribute of the cart Web Component.</p>
     </template>
     <template v-slot:advantages> 
       <ul>
@@ -37,10 +43,16 @@
         If we know that the parent container will have the same framework, even the framework-specific 
         parent-child component communication can stay the same, otherwise Custom Events should be dispatched.</li>
       <li>One project can expose multiple Web Components</li>
+      <li>Components can be distributed as npm packages as well</li>
       </ul>
     </template>
     <template v-slot:disadvantages> 
-      <ul></ul>
+      <ul>
+        <li>The framework's build process has to be changed</li>
+        <li>Passing complex or bigger data through Custom Element attributes can feel hacky</li>
+        <li>New and still changing standard</li>
+        <li>React is not fully compatible with the standard due to its synthetic event system</li>
+      </ul>
     </template>
     <template v-slot:links>
        <ul>
@@ -64,6 +76,14 @@
             href="https://itnext.io/prototyping-micro-frontends-d03397c5f770"
             >Kjartan Rekdal Müller: Easy Micro-Frontends:</a
           > An interesting and comprehensive article and example of using several frameworks with Web Components
+        </li>
+    
+          <li>
+          <a
+            class="link-highlight"
+            href="https://custom-elements-everywhere.com/"
+            >Custom Elements Everywhere:</a
+          > A nice summary of custom elements and a list of frameworks describing thier compatibility
         </li>
       </ul>
       
