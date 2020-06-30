@@ -3,13 +3,13 @@
         <template v-slot:title>JavaScript</template>
      <template v-slot:source>
       <a class="link-highlight"
-            href="https://mf-js-container.now.sh/">This webshop</a> / 
+            href="https://js-container.vercel.app/">This webshop</a> / 
       <a class="link-highlight"
             href="https://github.com/micro-frontends-poc/mf-js">Source</a>
     </template>
     <template v-slot:webshop>
       <iframe
-        :src="url"
+        src="https://js-container.vercel.app/"
         frameBorder="0"
         scrolling="no"
         title="MF Web Components demo"

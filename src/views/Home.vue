@@ -12,6 +12,24 @@
     <article class="mt-16">
       <h1>Micro-frontends</h1>
       <i>Microservices concept for the frontend</i>
+      <section class="p-6 mt-6 bg-default-soft">
+        <p>
+          This is an informative site about micro-frontend architecture. Read
+          about the general concept here and check out how it can be applied
+          with the help of the demo webshops built with
+          <router-link to="iframes" class="link-highlight">iframes</router-link
+          >,
+          <router-link to="web-components" class="link-highlight"
+            >Web Components</router-link
+          >
+          and a JavaScript meta-framework,
+          <router-link
+            to="javascript"
+            class="link-highlight"
+            >Single-SPA</router-link
+          >.
+        </p>
+      </section>
       <p class="my-6">
         When several developers work on a frontend project, problems can arise:
       </p>
@@ -89,8 +107,11 @@
       <h2 class="mt-10">Caveats/Challenges:</h2>
       There are many aspects to consider before switching to micro-frontends. It
       has to be a conscious decision, as it fundamentally defines the frontend
-      architecture. What is important to note is that micro-frontends is 
-      about <span class="font-bold italic">developer experience and team management</span> rather than user experience.
+      architecture. What is important to note is that micro-frontends is about
+      <span class="font-bold italic"
+        >developer experience and team management</span
+      >
+      rather than user experience.
       <ul class="my-6">
         <li>
           <b>Complexity:</b>

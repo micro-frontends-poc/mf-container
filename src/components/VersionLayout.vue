@@ -2,16 +2,15 @@
   <section
     class="versions-container col-start-2 col-span-10 grid grid-cols-9 gap-4"
   >
-  <div class="flex items-baseline col-span-9">
-<h1 class="mr-3"><slot name="title"></slot></h1>
-    (<slot name="source"></slot>)
-  </div>
-    
-    <section class="col-span-9 md:col-span-5">
+    <div class="flex items-baseline col-span-9">
+      <h1 class="mr-3"><slot name="title"></slot></h1>
+      (<slot name="source"></slot>)
+    </div>
+
+    <section class="col-span-9 md:col-span-5 border">
       <slot name="webshop">Loading...</slot>
     </section>
     <section class="col-span-9 md:col-span-4 ">
-      
       <h2 class="">About this pattern</h2>
       <slot name="about"></slot>
       <h2 class="mt-6">Useful links</h2>
