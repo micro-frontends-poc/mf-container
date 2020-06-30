@@ -14,7 +14,7 @@
       <i>Microservices concept for the frontend</i>
       <section class="p-6 mt-6 bg-default-soft">
         <p>
-          This is an informative site about micro-frontend architecture. Read
+          This site is about micro-frontend architecture. Read
           about the general concept here and check out how it can be applied
           with the help of the demo webshops built with
           <router-link to="iframes" class="link-highlight">iframes</router-link
